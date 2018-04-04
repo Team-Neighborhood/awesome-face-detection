@@ -23,7 +23,7 @@ for idx in range(10):
 
     time = (cv2.getTickCount() - start) / cv2.getTickFrequency() * 1000
     list_time.append(time)
-    print ('elapsed time: %.3fms'%time)
+    # print ('elapsed time: %.3fms'%time)
 
 ### draw rectangle bbox
 for i in range(0, detections.shape[2]):
@@ -43,6 +43,8 @@ for i in range(0, detections.shape[2]):
     cv2.rectangle(bgr_img, (l,y-text_size[1]),(l+text_size[0], y+base_line), (0,255,0), -1)
     cv2.putText(bgr_img, text, (l, y),
         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1)
+
+print ('average time: %.3f ms'%np.array(list_time[1:]).mean())
 
 cv2.namedWindow('show', 0)
 cv2.imshow('show', bgr_img)

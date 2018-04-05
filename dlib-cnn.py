@@ -18,6 +18,7 @@ for idx in range(10):
     start = cv2.getTickCount()
     (h, w) = bgr_img.shape[:2]
 
+    rgb_img = cv2.resize(rgb_img, None, fx=0.5, fy=0.5)
     mmod_rects = detector_hog(rgb_img, 1)
 
     time = (cv2.getTickCount() - start) / cv2.getTickFrequency() * 1000
@@ -27,10 +28,10 @@ for idx in range(10):
 ### draw rectangle bbox
 for i, mmod_rect in enumerate(mmod_rects):
     dlib_rect = mmod_rect.rect
-    l = dlib_rect.left()
-    t = dlib_rect.top()
-    r = dlib_rect.right()
-    b = dlib_rect.bottom()
+    l = dlib_rect.left() * 2
+    t = dlib_rect.top() * 2
+    r = dlib_rect.right() * 2
+    b = dlib_rect.bottom() * 2
 
     cv2.rectangle(bgr_img, (l,t), (r,b), (0,255,0), 2)
 

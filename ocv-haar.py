@@ -17,6 +17,7 @@ for idx in range(10):
     start = cv2.getTickCount()
     (h, w) = bgr_img.shape[:2]
 
+    gray_img = cv2.resize(gray_img, None, fx=0.5, fy=0.5)
     bbs = detector_haar.detectMultiScale(gray_img, 1.1)
 
     time = (cv2.getTickCount() - start) / cv2.getTickFrequency() * 1000
@@ -25,7 +26,7 @@ for idx in range(10):
 
 ### draw rectangle bbox
 for bb in bbs:
-    (l, t, w, h) = bb
+    (l, t, w, h) = bb*2
     cv2.rectangle(bgr_img, (l, t), (l+w, t+h), (0, 255, 0), 2)
 
 print ('average time: %.3f ms'%np.array(list_time[1:]).mean())

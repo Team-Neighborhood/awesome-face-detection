@@ -2,10 +2,11 @@ from __future__ import print_function
 import numpy as np
 import cv2
 import dlib
+import argparse
 
-cv2.namedWindow('show', 0)
-cv2.imshow('show', np.zeros((5,5,3), dtype=np.uint8))
-cv2.waitKey(500)
+parser = argparse.ArgumentParser()
+parser.add_argument('--with_draw', help='do draw?', default='True')
+args = parser.parse_args()
 
 detector_hog = dlib.get_frontal_face_detector()
 
@@ -26,17 +27,18 @@ for idx in range(10):
     list_time.append(time)
     # print ('elapsed time: %.3fms'%time)
 
+print ('dlib hog average time: %.3f ms'%np.array(list_time[1:]).mean())
+
 ### draw rectangle bbox
-for dlib_rect in dlib_rects:
-    l = dlib_rect.left() * 2
-    t = dlib_rect.top() * 2
-    r = dlib_rect.right() * 2
-    b = dlib_rect.bottom() * 2
+if args.with_draw == 'True':
+    for dlib_rect in dlib_rects:
+        l = dlib_rect.left() * 2
+        t = dlib_rect.top() * 2
+        r = dlib_rect.right() * 2
+        b = dlib_rect.bottom() * 2
 
-    cv2.rectangle(bgr_img, (l,t), (r,b), (0,255,0), 2)
+        cv2.rectangle(bgr_img, (l,t), (r,b), (0,255,0), 2)
 
-print ('average time: %.3f ms'%np.array(list_time[1:]).mean())
-
-cv2.namedWindow('show', 0)
-cv2.imshow('show', bgr_img)
-cv2.waitKey()
+    cv2.namedWindow('show', 0)
+    cv2.imshow('show', bgr_img)
+    cv2.waitKey()

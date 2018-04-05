@@ -1,10 +1,11 @@
 from __future__ import print_function
 import numpy as np
 import cv2
+import argparse
 
-cv2.namedWindow('show', 0)
-cv2.imshow('show', np.zeros((5,5,3), dtype=np.uint8))
-cv2.waitKey(500)
+parser = argparse.ArgumentParser()
+parser.add_argument('--with_draw', help='do draw?', default='True')
+args = parser.parse_args()
 
 detector_haar = cv2.CascadeClassifier('./models/haarcascade_frontalface_alt.xml')
 
@@ -25,13 +26,14 @@ for idx in range(10):
     list_time.append(time)
     # print ('elapsed time: %.3fms'%time)
 
+print ('ocv-haar average time: %.3f ms'%np.array(list_time[1:]).mean())
+
 ### draw rectangle bbox
-for bb in bbs:
-    (l, t, w, h) = bb*2
-    cv2.rectangle(bgr_img, (l, t), (l+w, t+h), (0, 255, 0), 2)
+if args.with_draw == 'True':
+    for bb in bbs:
+        (l, t, w, h) = bb*2
+        cv2.rectangle(bgr_img, (l, t), (l+w, t+h), (0, 255, 0), 2)
 
-print ('average time: %.3f ms'%np.array(list_time[1:]).mean())
-
-cv2.namedWindow('show', 0)
-cv2.imshow('show', bgr_img)
-cv2.waitKey()
+    cv2.namedWindow('show', 0)
+    cv2.imshow('show', bgr_img)
+    cv2.waitKey()

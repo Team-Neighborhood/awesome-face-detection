@@ -39,11 +39,11 @@ for i in range(0, detections.shape[2]):
         (0, 255, 0), 2)
     
     text = "face: %.2f" % confidence
-    text_size, base_line = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 1)
+    text_size, base_line = cv2.getTextSize(text, cv2.FONT_HERSHEY_SIMPLEX, 0.6, 2)
     y = t #- 1 if t - 1 > 1 else t + 1
     cv2.rectangle(bgr_img, (l,y-text_size[1]),(l+text_size[0], y+base_line), (0,255,0), -1)
     cv2.putText(bgr_img, text, (l, y),
-        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 1)
+        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 0), 2)
 
 print ('average time: %.3f ms'%np.array(list_time[1:]).mean())
 

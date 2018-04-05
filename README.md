@@ -58,4 +58,29 @@ Of course, You can execute each file. and watch the result image (need opencv hi
 
     python dlib-hog.py
 
-Now, Select face detector you need!
+## Now, Select face detector you need!
+
+<br><br>
+
+---
+
+## Algorithm
+
+opencv haar cascade
+ - https://docs.opencv.org/3.4.1/d7/d8b/tutorial_py_face_detection.html
+
+opencv caffe based dnn (res-ssd)
+ - https://github.com/opencv/opencv/tree/master/samples/dnn
+
+dlib hog
+ - http://dlib.net/
+
+dlib cnn
+ - http://blog.dlib.net/2016/10/easily-create-high-quality-object.html
+
+face-recognition (dlib-based)
+ - https://github.com/ageitgey/face_recognition
+
+mtcnn
+ - https://github.com/TropComplique/mtcnn-pytorch (code)
+ - https://arxiv.org/abs/1604.02878 (paper)

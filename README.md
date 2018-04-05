@@ -58,7 +58,7 @@ Of course, You can execute each file. and watch the result image (need opencv hi
 
     python dlib-hog.py
 
-# Now, Select face detector you need!
+### Now, Select face detector you need!
 
 <br>
 

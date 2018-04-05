@@ -1,6 +1,8 @@
 # Awesome face detection
 
-<center><img src='./result.png' width=70%></center>
+<p align="center">
+    <img src='./result.png' width=70%>
+</p>
 
 ---
 

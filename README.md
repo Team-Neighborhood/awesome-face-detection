@@ -58,13 +58,13 @@ Of course, You can execute each file. and watch the result image (need opencv hi
 
     python dlib-hog.py
 
-## Now, Select face detector you need!
+# Now, Select face detector you need!
 
-<br><br>
+<br>
 
 ---
 
-## Algorithm
+## Reference
 
 opencv haar cascade
  - https://docs.opencv.org/3.4.1/d7/d8b/tutorial_py_face_detection.html

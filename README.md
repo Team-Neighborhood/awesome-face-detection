@@ -18,15 +18,19 @@ Compare face detectors - Dlib, OpenCV, Others..
 Test image : HD (720p)
 
 Test on **Intel i7-6700K & GTX1080**.
+
 | ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms |
+
 <br>
 
 Test on **MacBook pro retina 2014 mid**.
+
 | ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 | 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms |
+
 <br>
 
 ## Requirements

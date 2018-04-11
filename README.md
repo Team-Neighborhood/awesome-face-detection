@@ -15,7 +15,15 @@ Compare face detectors - Dlib, OpenCV, Others..
 
 ## Processing time
 
-Test image : HD (720p)
+Test image size : HD (720p)
+
+We wanted to check processing time on same condition. but It couldn't becasue each method demand different input size. (ex. opencv dnn use 300x300 bgr image.)
+
+So, Each code has a different image size.
+
+    ocv-dnn : 300x300
+    ocv-haar, dlib-hog, dlib-cnn, fr-hog, fr-cnn : VGA(640x360)
+    mtcnn : HD(1280x720)
 
 Test on **Intel i7-6700K & GTX1080**.
 

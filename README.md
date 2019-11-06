@@ -24,6 +24,7 @@ So, Each code has a different image size.
     ocv-dnn : 300x300
     ocv-haar, dlib-hog, dlib-cnn, fr-hog, fr-cnn : VGA(640x360)
     mtcnn : HD(1280x720)
+    s3fd : HD --> 1/8 scale. low resolution but awesome performance!
 
 Test on **Intel i7-6700K & GTX1080**.
 
@@ -75,6 +76,8 @@ Of course, You can execute each file. and watch the result image (need opencv hi
     python dlib-hog.py
 
 ### Now, Select face detector you need!
+
+### Every method is good. Especially S3FD is really awesome. It shows FAST, ACCURATE, EASY
 
 <br>
 

@@ -27,17 +27,17 @@ So, Each code has a different image size.
 
 Test on **Intel i7-6700K & GTX1080**.
 
-| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms |
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 34.32ms |
 
 <br>
 
 Test on **MacBook pro retina 2014 mid**.
 
-| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms |
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms | T.B.A |
 
 <br>
 
@@ -47,7 +47,8 @@ Test on **MacBook pro retina 2014 mid**.
 - OpenCV 3.4.0 (option: build from src with highgui)
 - Dlib 19.10.0
 - face_recognition 1.2.1
-- pytorch 0.3.1
+- pytorch 0.3.1 (mtcnn)
+- pytorch 1.2.0 (S3FD)
 
 ## Usage  
 
@@ -57,8 +58,13 @@ First, install libs
     pip install torch
     pip install dlib
     pip install face_recognition
+    pip install easydict
 
-Second, check run-time for each algorithm.
+Second, prepare weight file (s3fd)
+    download s3fd weight: https://drive.google.com/open?id=1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7
+    <ROOT DIR>/S3FD/weights/s3fd.pth
+
+Last, check run-time for each algorithm.
 
     ./run.sh
 
@@ -92,3 +98,7 @@ face-recognition (dlib-based)
 mtcnn
  - https://github.com/TropComplique/mtcnn-pytorch (code)
  - https://arxiv.org/abs/1604.02878 (paper)
+
+s3fd
+ - https://github.com/tkwoo/S3FD.pytorch (code: editing pytorch 1.3 style)
+ - https://github.com/yxlijun/S3FD.pytorch (original code)

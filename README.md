@@ -33,11 +33,11 @@ Test on **Intel i7-6700K & GTX1080**.
 
 <br>
 
-Test on **MacBook pro retina 2014 mid**.
+Test on **MacBook pro 2018 i5**.
 
 | ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms | T.B.A |
+| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms | 271.181ms |
 
 <br>
 
@@ -61,8 +61,10 @@ First, install libs
     pip install easydict
 
 Second, prepare weight file (s3fd)
-    download s3fd weight: https://drive.google.com/open?id=1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7
-    <ROOT DIR>/S3FD/weights/s3fd.pth
+    
+download s3fd weight: https://drive.google.com/open?id=1Dyr-s3mAQEj-AXCz8YIIYt6Zl3JpjFQ7
+    
+    [ROOT DIR]/S3FD/weights/s3fd.pth
 
 Last, check run-time for each algorithm.
 

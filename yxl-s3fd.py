@@ -88,7 +88,11 @@ def detect_image(net, img_orig, thresh):
 
 if __name__ == '__main__':
     net = build_s3fd('test', cfg.NUM_CLASSES)
-    net.load_state_dict(torch.load(args.model))
+
+    if use_cuda:
+        net.load_state_dict(torch.load(args.model))
+    else:
+        net.load_state_dict(torch.load(args.model, map_location=torch.device('cpu')))
     net.eval()
 
     if use_cuda:

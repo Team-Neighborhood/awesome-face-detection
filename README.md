@@ -44,12 +44,11 @@ Test on **MacBook pro 2018 i5**.
 
 ## Requirements
 
-- Python 3.6
-- OpenCV 3.4.0 (option: build from src with highgui)
-- Dlib 19.10.0
-- face_recognition 1.2.1
-- pytorch 0.3.1 (mtcnn)
-- pytorch 1.2.0 (S3FD)
+- Python 3.7
+- OpenCV 4.1.1 (option: build from src with highgui)
+- Dlib 19.17.0
+- face_recognition 1.2.3
+- pytorch 1.2.0
 
 ## Usage  
 

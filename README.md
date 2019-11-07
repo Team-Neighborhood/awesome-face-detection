@@ -30,7 +30,15 @@ Test on **Intel i7-6700K & GTX1080**.
 
 | ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 34.32ms |
+| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 40.32ms |
+
+<br>
+
+Test on **Intel Xeon E5-1660 & NVIDIA GV100**.
+
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 16.76ms | 32.95ms | 124.35ms | 24.58ms | 121.73ms | 24.88ms | 292.45ms | 31.07ms |
 
 <br>
 

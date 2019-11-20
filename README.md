@@ -88,8 +88,6 @@ Of course, You can execute each file. and watch the result image (need opencv hi
 
 ### Now, Select face detector you need!
 
-### Every method is good. Especially S3FD is really awesome. It shows FAST, ACCURATE, EASY
-
 <br>
 
 ---

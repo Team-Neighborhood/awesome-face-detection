@@ -25,28 +25,29 @@ So, Each code has a different image size.
     ocv-haar, dlib-hog, dlib-cnn, fr-hog, fr-cnn : VGA(640x360)
     mtcnn : HD(1280x720)
     s3fd : HD --> 1/8 scale. low resolution but awesome performance!
+    insightface(retianface_r50_v1) : VGA(640x360)
 
 Test on **Intel i7-6700K & GTX1080**.
 
-| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 31.87ms |
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD | insightface |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 31.87ms | 21.49ms |
 
 <br>
 
 Test on **Intel Xeon E5-1660 & NVIDIA GV100**.
 
-| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 16.76ms | 32.95ms | 124.35ms | 24.58ms | 121.73ms | 24.88ms | 292.45ms | 31.07ms |
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD | insightface |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 16.76ms | 32.95ms | 124.35ms | 24.58ms | 121.73ms | 24.88ms | 292.45ms | 31.07ms | TBA |
 
 <br>
 
 Test on **MacBook pro 2018 i5**.
 
-| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.752ms | 271.181ms |
+| ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD | insightface |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| 46.53ms | 88.47ms | 174.81ms | 3276.62ms | 174.63ms | 3645.53ms | 928.75ms | 271.18ms | TBA |
 
 <br>
 
@@ -57,6 +58,7 @@ Test on **MacBook pro 2018 i5**.
 - Dlib 19.17.0
 - face_recognition 1.2.3
 - pytorch 1.2.0
+- mxnet-cu100 1.5.1.post0
 
 ## Usage  
 
@@ -67,6 +69,8 @@ First, install libs
     pip install dlib
     pip install face_recognition
     pip install easydict
+    pip install mxnet-cu100
+    pip install insightface
 
 Second, prepare weight file (s3fd)
     

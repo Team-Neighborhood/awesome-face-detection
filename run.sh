@@ -10,3 +10,4 @@ python fr-hog.py --with_draw $SHOW
 python fr-cnn.py --with_draw $SHOW
 python dan-mtcnn.py --with_draw $SHOW
 python yxl-s3fd.py --with_draw $SHOW
+python di-insight.py --with_draw $SHOW

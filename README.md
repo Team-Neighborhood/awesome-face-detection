@@ -118,3 +118,6 @@ mtcnn
 s3fd
  - https://github.com/tkwoo/S3FD.pytorch (code: editing pytorch 1.3 style)
  - https://github.com/yxlijun/S3FD.pytorch (original code)
+
+insightface(retinaface)
+ - https://github.com/deepinsight/insightface (code)

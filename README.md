@@ -30,7 +30,7 @@ Test on **Intel i7-6700K & GTX1080**.
 
 | ocv-dnn | ocv-haar | dlib-hog | dlib-cnn | fr-hog | fr-cnn | mtcnn | S3FD |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 40.32ms |
+| 17.79ms | 42.31ms | 108.61ms | 42.17ms | 108.50ms | 39.91ms | 334.38ms | 31.87ms |
 
 <br>
 
